@@ -77,10 +77,7 @@ jobs:
         pushd luci-app-openclash/tools/po2lmo
         make && sudo make install
         popd
-        # 同步源码
-        cd package/luci-app-openclash/luci-app-openclash
-        git pull
-
+      
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
